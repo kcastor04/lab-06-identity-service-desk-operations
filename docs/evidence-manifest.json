@@ -1,0 +1,160 @@
+{
+  "repository": "lab-06-identity-service-desk-operations",
+  "status": "Client review",
+  "source": {
+    "title": "Hands-On IAM Labs - Lab 6: Identity Service Desk Operations",
+    "author": "Andrew",
+    "organization": "All Things Identity",
+    "guide_version": null,
+    "guide_version_note": "Not stated in the source. The footer reads '© 2026'; no version number is given.",
+    "software_versions": null,
+    "software_versions_note": "Not stated in the source. The guide warns that Authentik menu labels move between releases.",
+    "capture_date": null,
+    "capture_date_note": "Not stated in the source. The PDF file's creation timestamp reflects when the file was generated, not when any lab environment was observed.",
+    "file_name": "third.pdf",
+    "pages": 14,
+    "embedded_images": 0,
+    "numbered_figures": 0,
+    "sha256": "e62453bd3ca5cb4fd096350a5de7d65a13c08f48d3e089de8dd640fab768b74b"
+  },
+  "evidence_scope": "The package documents a supplied training guide. The guide contains written instructions, checkpoints, callouts, a testing checklist and a troubleshooting table, but no screenshots, figures or recorded test results. Content is described as what the guide describes, the expected behavior and the intended outcome. Personal execution of the lab and successful outcomes are not verified.",
+  "not_included": [
+    "Screenshots or rendered PDF pages presented as screenshots",
+    "Ticket IDs, account names, timestamps or event log exports",
+    "Test results, resolved tickets or completed account changes",
+    "Approval records, caller-verification procedures or escalation outcomes",
+    "Passwords, enrollment QR codes, MFA seeds, recovery codes or other credentials"
+  ],
+  "screenshots": [],
+  "screenshots_note": "Intentionally empty. The source PDF contains no embedded images (0 on each of its 14 pages) and no numbered figures. No screenshots were created, substituted or rendered from PDF pages.",
+  "redactions_applied": [],
+  "page_references": [
+    {
+      "content": "Title, attribution, why the lab matters, learning objectives",
+      "pages": "1-2"
+    },
+    {
+      "content": "Prerequisites (Labs 1-4, Authentik admin access), HTTP note, menu-label callout",
+      "pages": "2"
+    },
+    {
+      "content": "Section 01: triage, Events > Logs, deliberate failed logins, Checkpoint 1",
+      "pages": "2-3"
+    },
+    {
+      "content": "Ticket zero: verify the caller (no procedure defined by the guide)",
+      "pages": "4"
+    },
+    {
+      "content": "Section 02: Ticket 1, password reset, recovery-link callout, Checkpoint 2",
+      "pages": "4-5"
+    },
+    {
+      "content": "Section 03: Ticket 2, lockout versus deactivation, log callout, escalation, lab-only reactivation, Checkpoint 3",
+      "pages": "6-8"
+    },
+    {
+      "content": "Section 04: Ticket 3, authenticator removal and re-enrollment, exemption callout, Checkpoint 4",
+      "pages": "8-9"
+    },
+    {
+      "content": "Section 05: Ticket 4, authentication versus authorization, mover path, shortcut callouts, tile cache",
+      "pages": "10-11"
+    },
+    {
+      "content": "Checkpoint 5 and testing checklist",
+      "pages": "12"
+    },
+    {
+      "content": "Troubleshooting table",
+      "pages": "12-13"
+    },
+    {
+      "content": "Interview talk track (first person, learner-facing)",
+      "pages": "13"
+    },
+    {
+      "content": "Wrap-up",
+      "pages": "14"
+    }
+  ],
+  "limitations": [
+    {
+      "item": "Ticket 1 goal versus lab fallback",
+      "detail": "The goal and testing checklist describe a credential the analyst never learns, but the lab has no recovery flow and falls back to an admin-set password. The documentation does not claim an analyst-unknown password.",
+      "pages": "4-5, 12"
+    },
+    {
+      "item": "Ticket 2 log behavior",
+      "detail": "The finding that a correct password against an inactive account produces login_failed, indistinguishable from a wrong password, is the guide's report for its environment and is not independently verified.",
+      "pages": "7"
+    },
+    {
+      "item": "Lab-only reactivation",
+      "detail": "The guide reactivates the leaver for later labs. It is documented as a controlled training step separate from the production response (escalation) and is not claimed as performed.",
+      "pages": "7-8"
+    },
+    {
+      "item": "Caller verification",
+      "detail": "The guide requires following the organization's standard but does not define one.",
+      "pages": "4"
+    },
+    {
+      "item": "MFA exemption",
+      "detail": "The guide requires an expiry and a note for any temporary exemption; no approval flow is defined.",
+      "pages": "9"
+    },
+    {
+      "item": "Tile cache",
+      "detail": "The 24-hour tile-cache behavior and workaround are stated for the source environment only.",
+      "pages": "11, 13"
+    },
+    {
+      "item": "Role mapping dependency",
+      "detail": "The troubleshooting row on wrong WordPress permissions depends on group-based role mapping from Lab 4. Plugin tier support and the role configuration need confirmation.",
+      "pages": "13"
+    },
+    {
+      "item": "Software version",
+      "detail": "No Authentik, OrangeHRM or WordPress version is stated; menu labels may differ.",
+      "pages": "2"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "assets/project-banner.png",
+      "type": "Banner",
+      "content": "Lab title with a four-tickets-to-triage motif.",
+      "method": "Generated deterministically with Python/Pillow (_build/diagrams.py; no AI artwork).",
+      "sha256": "01bd2db205c58637f034446aac9a38a18e37861c252b8e48672d3ab905d89319"
+    },
+    {
+      "file": "assets/architecture.png",
+      "type": "Architecture diagram (image export)",
+      "exported_from": "README.md, first mermaid block (the editable source)",
+      "method": "Rendered from the README Mermaid source with Mermaid 11.17.2 in headless Chrome at 2x scale (_build/export_diagrams.py).",
+      "sha256": "634dffbc3727a736b53a69de0967bb9133aa579dc4c3affdb28b5ca182b1c931"
+    },
+    {
+      "file": "assets/workflow.png",
+      "type": "Workflow diagram (image export)",
+      "exported_from": "README.md, second mermaid block (the editable source)",
+      "method": "Rendered from the README Mermaid source with Mermaid 11.17.2 in headless Chrome at 2x scale (_build/export_diagrams.py).",
+      "sha256": "ba26bd81c75fee8800201594c7ab6e67acb124f3e473877304136741084a7d90"
+    }
+  ],
+  "mermaid_diagrams": [
+    {
+      "location": "README.md, Architecture / Workflow section (first mermaid block)",
+      "type": "Architecture diagram",
+      "content": "Analyst admin session and separate test-user session; Authentik events, users (Active state), authenticators, dept- groups and the WordPress binding; OrangeHRM feeding the mover. Evidence reading, admin changes and the HR membership path are distinguished; there is no direct HR-to-WordPress path.",
+      "method": "Mermaid flowchart written as text in README.md; rendered natively by GitHub and editable as text."
+    },
+    {
+      "location": "README.md, Architecture / Workflow section (second mermaid block)",
+      "type": "Workflow diagram",
+      "content": "Caller verification and triage, classification into password recovery, inactive-account escalation, MFA recovery or authorization investigation, then validation. The lab-only reactivation is shown separately from the production escalation.",
+      "method": "Mermaid flowchart written as text in README.md; rendered natively by GitHub and editable as text."
+    }
+  ]
+}
